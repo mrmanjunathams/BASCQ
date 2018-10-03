@@ -1,45 +1,71 @@
-.parallax1 {
-    background-image: url('images/img1.jpg');
-    height: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+body{
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
 }
-.Content{
-  background-color: white;
+h1{
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  font-size: 6em;
+  z-index: 2;
+}
+.container_bg{
+  position: relative;
+
+}
+ul{
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+}
+li{
+  position: absolute;
+  top: 0;
+  left: 0;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  background: url(images/snow.png);
+  background-size: contain;
+  animation: animate 10s linear infinite;
 }
 
-.parallax2 {
-    background-image: url('images/img5.jpg');
-    height: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+@keyframes animate{
+  0%{
+    transform: scale(1) rotate(0deg);
+    opacity: 0;
+  }
+  50%{
+    transform: scale(2) rotate(180deg);
+    opacity: 1;
+  }
+  100%{
+    transform: scale(0) rotate(360deg);
+    opacity: 0;
+  }
 }
-.parallax3 {
-    background-image: url('images/img6.jpg');
-    height: 100%;
-    width: 100%
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+ul li:nth-child(1){
+  animation-delay: 8s;
 }
-.parallax4 {
-    background-image: url('images/img2.jpg');
-    height: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+ul li:nth-child(2){
+  animation-delay: 6s;
 }
-.parallax5 {
-    background-image: url('images/img7.jpg');
-    height: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+ul li:nth-child(3){
+  animation-delay: 4s;
+}
+ul li:nth-child(4){
+  animation-delay: 2s;
+}
+ul li:nth-child(5){
+  animation-delay: 0s;
 }

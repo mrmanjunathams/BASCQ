@@ -1,0 +1,114 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.container_eff{
+  position: relative;
+  width: 1200px;
+  height: 300px;
+  margin: 200px auto;
+}
+.container_eff .box{
+  position: relative;
+  width: calc(400px - 30px);
+  height: calc(350px - 30px);
+  background: #000;
+  float: left;
+  margin: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.container_eff .box .icon{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f00;
+  transition: 0.5s;
+  z-index: 1;
+}
+.container_eff .box:hover .icon{
+  top:20px;
+  left: calc(50% - 40px);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.container_eff .box .icon .fa{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 80px;
+  transition: 0.5s;
+  color: #fff;
+}
+.container_eff .box:hover .icon .fa{
+  font-size: 40px;
+}
+.container_eff .box .content{
+  position: absolute;
+  text-align: center;
+  top:100%;
+  height: (100% - 100px);
+  padding: 20px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  opacity: 0;
+}
+.container_eff .box:hover .content{
+  top: 100px;
+  opacity: 1;
+}
+.container_eff .box .content h3{
+  margin: 0 0 10px;
+  text-align: center;
+  padding: 0;
+  color: #fff;
+  font-size: 24px;
+}
+.container_eff .box .content p{
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+.container_eff .box:nth-child(1) .icon{
+background: #319635;
+}
+.container_eff .box:nth-child(1){
+background: #4caf50;
+}
+.container_eff .box:nth-child(2) .icon{
+background: #d03852;
+}
+.container_eff .box:nth-child(2){
+background: #f54967;
+}
+.container_eff .box:nth-child(3) .icon{
+background: #23798e;
+}
+.container_eff .box:nth-child(3){
+background: #328fa5;
+}
+.container_eff .box .content span{
+  color: #fff;
+}
+.container_eff .box .content span a{
+  display: inline-block;
+  padding: 5px 20px;
+  color: #fff;
+  border: 2px solid #fff;
+  text-decoration: none;
+  transition: 0.5s;
+  border-radius: 20px;
+  transition: scale(0);
+  font-size: 14px;
+}
+.container_eff .box .content span a:hover{
+  background: #fff;
+  color: #262626;
+  transform: scale(1);
+}
